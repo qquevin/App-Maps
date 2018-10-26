@@ -11,8 +11,8 @@ export class HomePage {
 
   @ViewChild('map') mapElement: ElementRef;
   map: any;
-  start = 'chicago, il';
-  end = 'chicago, il';
+  start = 'Lisbon';
+  end = 'Porto';
   directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
   constructor(public navCtrl: NavController,  platform: Platform){
