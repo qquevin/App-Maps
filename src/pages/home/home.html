@@ -1,0 +1,59 @@
+<!-- E boa pratica na programacao NUNCA utilizar nem acentos nem cedilhas 
+  porque corremos o risco de eles gerarem erros desnecessario-->
+
+<!-- Aqui definimos o cabecalho da nossa aplicacao -->
+<ion-header>
+  <!--Comecammos por inserir uma barra de navegacao -->
+  <ion-navbar>
+    <!--Inserimos um botao que abre o menu lateral quando carregam no canto superior esquerdo -->
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+<!--Aqui termina a confuguracao do cabecalho para assinalar temos a "/" ante de ion-header-->
+<!--o mesmo se verifica para todas as outras configuracoes iniciamos sem a barra e terminamos com a barra-->
+</ion-header>  
+
+
+<ion-content>
+  <div id="floating-panel">
+    <b>Start: </b>
+    <select [(ngModel)]="start" id="start">
+      <option value="Lisbon">Lisbon</option>
+      <option value="Porto">Porto</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+      </select>
+
+    <br>
+    <b>End: </b>
+    <select [(ngModel)]="end" id="end">
+      <option value="Lisbon">Lisbon</option>
+      <option value="Porto">Porto</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+      </select>
+    <button ion-button block (click)="calculateAndDisplayRoute()">Generate</button>
+  </div>
+  <div #map id="map"></div>
+</ion-content>
+
+
+
